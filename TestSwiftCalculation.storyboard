@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Learn_constraint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55f-qe-YfJ">
+                                <rect key="frame" x="133" y="400" width="108" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="submit button">
+                                    <color key="titleColor" red="1" green="0.1505729026" blue="0.59578806660000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBl-Oe-Ki0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="constraint lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxi-M3-HCD">
+                                <rect key="frame" x="123" y="350" width="118" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.1505729026" blue="0.59578806660000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcn-wt-f49">
+                                <rect key="frame" x="146" y="298" width="78" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55r-qD-pGh">
+                                <rect key="frame" x="146" y="217" width="78" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="g55-8M-tTc"/>
+                                    <constraint firstAttribute="width" constant="100" id="mQR-gF-DmA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GCJ-1p-DAt">
+                                <rect key="frame" x="257" y="144" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92954911380000005" green="1" blue="0.63293040990000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gxi-M3-HCD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ANl-L6-jcr"/>
+                            <constraint firstItem="hcn-wt-f49" firstAttribute="top" secondItem="55r-qD-pGh" secondAttribute="bottom" constant="51" id="DK3-hL-7h5"/>
+                            <constraint firstItem="hcn-wt-f49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PFd-vF-zEC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="55r-qD-pGh" secondAttribute="trailing" constant="151" id="Q8v-Sa-SAO"/>
+                            <constraint firstItem="55r-qD-pGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="Tqj-Uo-tgX"/>
+                            <constraint firstItem="55r-qD-pGh" firstAttribute="trailing" secondItem="hcn-wt-f49" secondAttribute="trailing" id="XGM-2q-RdW"/>
+                            <constraint firstItem="55r-qD-pGh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="a7a-o7-4bz"/>
+                            <constraint firstItem="gxi-M3-HCD" firstAttribute="top" secondItem="hcn-wt-f49" secondAttribute="bottom" constant="22" id="sD8-cy-rdW"/>
+                            <constraint firstItem="hcn-wt-f49" firstAttribute="top" secondItem="55r-qD-pGh" secondAttribute="bottom" constant="51" id="urp-7q-7YS"/>
+                            <constraint firstItem="55r-qD-pGh" firstAttribute="leading" secondItem="hcn-wt-f49" secondAttribute="leading" id="vtu-Y5-Hj6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="hcn-wt-f49" id="yhK-Mu-baH"/>
+                        <outlet property="hoaLable" destination="gxi-M3-HCD" id="a2Q-86-F9K"/>
+                        <outlet property="switchAddSubtract" destination="GCJ-1p-DAt" id="skF-4k-x9g"/>
+                        <outlet property="toptextfield" destination="55r-qD-pGh" id="xrL-fH-2In"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
